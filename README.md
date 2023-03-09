@@ -1,1 +1,1 @@
- Live website Link [Live Server plugin](https://assignment2julfiker744.netlify.app/) & start the server.
+ Live website Link [website](https://assignment2julfiker744.netlify.app/) & start the server.
