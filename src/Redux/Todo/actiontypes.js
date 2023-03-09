@@ -1,0 +1,6 @@
+export const ADDTODO='todo/addtodo'
+export const TOOGLECOM='todo/togglecom'
+export const COLORCHANGE='todo/colorchange'
+export const DELETETODO='todo/deletedoto'
+export const COMPLETEALL='todo/completedall'
+export const COMPLETEDCLEARALL='todo/completedclearall'

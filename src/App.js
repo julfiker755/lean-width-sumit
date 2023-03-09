@@ -1,47 +1,36 @@
-import './App.css'
-import image1 from './img/lws-logo.svg'
-import { Provider} from 'react-redux'
-import store from './components/Redux/store'
-import FightInput from './components/FightInput'
-import Fight from './components/Fight'
+import { Provider } from "react-redux";
+import Footder from "./component/Footder";
+import Fromh from "./component/Fromh";
+import Todo from "./component/Todo/Todo";
+import store from "./Redux/store";
 
 
 export default function App() {
     return (
-         <Provider store={store}>
-             <>
-          {/* header */}
-          <header id="header">
-                <div className="container">
-                    <img src={image1} alt="logo" className="logo" />
-                    <div className="flex items-center">
-                        <a className="text-white min-w-[50px] font-medium" href="#">Home</a>
-                        <button className="log-btn btn">Login</button>
-                    </div>
-                </div>
-            </header>
-    {/* <!-- Input Data --> */}
-       <FightInput></FightInput>
-           {/* <!--------------------- Preview Data ----------------------> */}
-    <div className="table-container">
-      <table className="booking-table">
-        <thead className="bg-gray-100/50">
-          <tr className="text-black text-left">
-            <th>Destination From</th>
-            <th>Destination To</th>
-            <th className="text-center">Journey Date</th>
-            <th className="text-center">Guests</th>
-            <th className="text-center">Class</th>
-            <th className="text-center">Delete</th>
-          </tr>
-        </thead>
-        <Fight></Fight>
-      </table>
+        <Provider store={store}>
+            <div
+            class="grid place-items-center bg-blue-100 h-screen px-6 font-sans"
+        >
+            {/* <!-- navbar --> */}
+            <div
+                class="fixed top-0 left-0 text-center w-full header bg-violet-600 py-4 text-white font-bold text-lg shadow-lg"
+            >
+                Simple Todo Application with Redux
+            </div>
 
-      
-    </div>
-   
-          </>
-         </Provider>
+            <div class="w-full max-w-3xl shadow-lg rounded-lg p-6 bg-white">
+                {/* <!-- header --> */}
+                 <Fromh></Fromh>
+                <hr class="mt-4" />
+
+                {/* <!-- todo list --> */}
+                <Todo></Todo>
+                <hr class="mt-4" />
+                     
+                {/* <!-- footer --> */}
+                 <Footder></Footder>
+            </div>
+        </div>
+        </Provider>
     );
 }
